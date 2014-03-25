@@ -34,3 +34,7 @@
 
   width: 100%;
 }
+
+#char_name {
+  text-align: center;
+}
