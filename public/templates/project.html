@@ -5,24 +5,34 @@
   <br>
 
   <div class="row">
-
-
-
       <div ng-controller="projectsCtrl">
         <form class="project_form" ng-submit="updateProject()"  ng-init="project={}">
-        <div class="row">
-          <div class="large-12 columns">
-            <input id="project_field_title" type="text" ng-model="project.name" placeholder="film title">
+          <div class="row">
+            <div class="large-12 columns">
+              <input id="project_field_title" type="text" ng-model="project.name" placeholder="film title">
+              <input id="project_field_data" type="text" ng-model="project.location" placeholder="location">
+              <input id="project_field_data" type="text" ng-model="project.description" placeholder="description">
+            </div>
           </div>
-        </div>
+        </form>
         <div class="row">
           <div class="large-3 columns large-left">
-            <input id="project_field_data" type="text" ng-model="project.location" placeholder="location">
-            <input id="project_field_data" type="text" ng-model="project.description" placeholder="description">
+              <form ng-submit="saveCharacter()" ng-init="character={}">
+                <input type="text" ng-model="character.name" placeholder="name">
+                <input type="text" ng-model="character.age" placeholder="age">
+                <input type="text" ng-model="character.height" placeholder="height">
+                <input type="text" ng-model="character.weight" placeholder="weight">
+                <input type="text" ng-model="character.eye_color" placeholder="eye color">
+                <input type="text" ng-model="character.hair_color" placeholder="hair color">
+                <input type="text" ng-model="character.gender" placeholder="gender">
+                <button class="btn btn-primary">add the character</button>
+              </form>
+
+
+
           </div>
           <div class="large-9 columns">
             <div ng-controller="charactersCtrl">
-              Characters:
               <div ng-repeat="character in characters">
                 <div class="panel" id="character">
                   <h5>{{character.name}}</h5>
@@ -36,7 +46,7 @@
             </div>
           </div>
         </div>
-        </form>
+
       </div>
 
     <br>
@@ -45,25 +55,13 @@
 
 
 
-      <br>
-      <div class="movie_footer">
-        <div class="row">
-          <form ng-submit="saveCharacter()" ng-init="character={}">
-            <div class="small-12 large-12 columns">
 
-            </div>
-            <input type="text" ng-model="character.name" placeholder="name">
-            <input type="text" ng-model="character.age" placeholder="age">
-            <input type="text" ng-model="character.height" placeholder="height">
-            <input type="text" ng-model="character.weight" placeholder="weight">
-            <input type="text" ng-model="character.eye_color" placeholder="eye color">
-            <input type="text" ng-model="character.hair_color" placeholder="hair color">
-            <input type="text" ng-model="character.gender" placeholder="gender">
-            <button class="btn btn-primary">add the character</button>
-          </form>
-        </div>
-      </div>
-    </div>
+
+
+
+
+
+
 
 
   </div>
