@@ -1,4 +1,4 @@
-  <div class="row">
+<div class="row">
     <div class="small-12 large-12 columns">
 
   <br>
@@ -14,52 +14,59 @@
             </div>
           </div>
 
+
         <div class="row">
           <div class="large-3 columns large-left">
             <input id="project_field_data" type="text" ng-model="project.location" placeholder="location">
             <input id="project_field_data" type="text" ng-model="project.description" placeholder="description">
           </form>
+
+
+            <div class="add_character">
+              <form ng-submit="saveCharacter()" ng-init="character={}">
+
+                <div class="row">
+                  <div class="large-12 columns">
+                    <input type="text" ng-model="character.name" placeholder="name">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="large-6 columns">
+                    <input type="text" ng-model="character.age" placeholder="age">
+                  </div>
+                  <div class="large-6 columns">
+                    <input type="text" ng-model="character.gender" placeholder="gender">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="large-6 columns">
+                    <input type="text" ng-model="character.height" placeholder="height">
+                  </div>
+                  <div class="large-6 columns">
+                    <input type="text" ng-model="character.weight" placeholder="weight">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="large-6 columns">
+                    <input type="text" ng-model="character.eye_color" placeholder="eye color">
+                  </div>
+                  <div class="large-6 columns">
+                    <input type="text" ng-model="character.hair_color" placeholder="hair color">
+                  </div>
+                </div>
+
+                <button class="btn btn-primary">add the character</button>
+              </form>
+            </div>
+
+
+
           </div>
           <div class="large-9 columns">
             <div ng-controller="charactersCtrl">
-
-
-                <div class="panel" id="new_character">
-                  <form ng-submit="saveCharacter()" ng-init="character={}">
-                    <input type="text" id="char_name" ng-model="character.name" placeholder="name">
-                    <div class="row">
-                      <div class="large-4 columns">
-                        <input type="text" ng-model="character.age" placeholder="age">
-                      </div>
-                      <div class="large-4 columns">
-                        <input type="text" ng-model="character.gender" placeholder="gender">
-                      </div>
-                      <div class="large-4 columns">
-                        <input type="text" ng-model="character.eye_color" placeholder="eye color">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="large-4 columns">
-                        <input type="text" ng-model="character.hair_color" placeholder="hair color">
-                      </div>
-                      <div class="large-4 columns">
-                        <input type="text" ng-model="character.weight" placeholder="weight">
-                      </div>
-                      <div class="large-4 columns">
-                        <input type="text" ng-model="character.height" placeholder="height">
-                      </div>
-                    </div>
-
-
-
-
-
-                    <button class="btn btn-primary">add the character</button>
-                  </form>
-                </div>
-
-
-
               <div ng-repeat="character in characters">
                 <div class="panel" id="character">
                   <h5>{{character.name}}</h5>
@@ -70,7 +77,6 @@
                   <p>{{character.hair_color}}</p>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -78,7 +84,6 @@
       </div>
 
     <br>
-
 
 
 
