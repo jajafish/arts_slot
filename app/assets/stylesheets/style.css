@@ -6,17 +6,26 @@
   height: 170px;
 }
 
-
+/*
 .movie_footer {
   position: fixed;
   bottom: 0px;
   background-color: blue;
   width: 100%;
 
-}
+}*/
 
 
-.project_field {
+#project_field_title {
   text-align: center;
   font-size: 30px;
+  height: 60px;
+  border: 0px;
+  box-shadow: none;
+}
+
+#project_field_data {
+  text-align: left;
+  font-size: 18px;
+  height: 30px;
 }

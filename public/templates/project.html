@@ -1,33 +1,49 @@
   <div class="row">
     <div class="small-12 large-12 columns">
 
-    <div ng-controller="projectsCtrl">
-      <form ng-submit="updateProject()"  ng-init="project={}">
-        <input type="text" ng-model="project.name" placeholder="name">
-        <input type="text" ng-model="project.location" placeholder="location">
-        <input type="text" ng-model="project.description" placeholder="description">
-        <button class="btn btn-primary">update</button>
-      </form>
+  <br>
+  <br>
 
-      <div ng-model="project">
-          <li>Title: {{project.name}}
-          <li>Location: {{project.location}}
-          <li>Description: {{project.description}}
-          <li>Id: {{project.id}}
+  <div class="row">
+
+
+
+      <div ng-controller="projectsCtrl">
+        <form class="project_form" ng-submit="updateProject()"  ng-init="project={}">
+        <div class="row">
+          <div class="large-12 columns">
+            <input id="project_field_title" type="text" ng-model="project.name" placeholder="film title">
+          </div>
+        </div>
+        <div class="row">
+          <div class="large-3 columns large-left">
+            <input id="project_field_data" type="text" ng-model="project.location" placeholder="location">
+            <input id="project_field_data" type="text" ng-model="project.description" placeholder="description">
+          </div>
+          <div class="large-9 columns">
+            <div ng-controller="charactersCtrl">
+              Characters:
+              <div ng-repeat="character in characters">
+                <div class="panel" id="character">
+                  <h5>{{character.name}}</h5>
+                  <p>{{character.age}}</p>
+                  <p>{{character.height}}</p>
+                  <p>{{character.weight}}</p>
+                  <p>{{character.eye_color}}</p>
+                  <p>{{character.hair_color}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </form>
       </div>
-    </div>
 
     <br>
-    <br>
-    <br>
 
 
 
-    <div ng-controller="charactersCtrl">
-      Characters:
-      <div ng-repeat="character in characters">
-      <p>{{character.name}}</p>
-      </div>
+
 
       <br>
       <div class="movie_footer">
