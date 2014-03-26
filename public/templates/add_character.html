@@ -1,0 +1,39 @@
+<div class="add_character">
+  <form ng-submit="saveCharacter()" ng-init="character={}">
+
+    <div class="row">
+      <div class="large-12 columns">
+        <input type="text" ng-model="character.name" placeholder="name">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-6 columns">
+        <input type="text" ng-model="character.age" placeholder="age">
+      </div>
+      <div class="large-6 columns">
+        <input type="text" ng-model="character.gender" placeholder="gender">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-6 columns">
+        <input type="text" ng-model="character.height" placeholder="height">
+      </div>
+      <div class="large-6 columns">
+        <input type="text" ng-model="character.weight" placeholder="weight">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-6 columns">
+        <input type="text" ng-model="character.eye_color" placeholder="eye color">
+      </div>
+      <div class="large-6 columns">
+        <input type="text" ng-model="character.hair_color" placeholder="hair color">
+      </div>
+    </div>
+
+    <button class="btn btn-primary">add the character</button>
+  </form>
+</div>
