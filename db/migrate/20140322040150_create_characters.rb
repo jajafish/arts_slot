@@ -8,6 +8,7 @@ class CreateCharacters < ActiveRecord::Migration
       t.string :eye_color
       t.string :hair_color
       t.string :gender
+      t.string :ethnicity
       t.integer :project_id
       t.integer :user_id
       t.timestamps

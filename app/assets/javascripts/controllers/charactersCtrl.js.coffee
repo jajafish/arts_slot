@@ -9,11 +9,6 @@ angular.module("artSlotAppCtrls")
             $scope.characters = data;
         )
 
-        # $scope.newCharacter = ->
-        #   $scope.character = {}
-        #   character = new projectRes($scope.project)
-        #   newProject = project.$save ->
-
         $scope.saveCharacter = ->
           $scope.character.project_id = $routeParams.id
           characterRes.save($scope.character, (response)->
@@ -23,10 +18,5 @@ angular.module("artSlotAppCtrls")
           #empty the character's form on the view
           $scope.character = {}
           )
-
-        # $scope.gender = [
-        #   {name: "male"}
-        #   {name: "female"}
-        # ]
 
   ])

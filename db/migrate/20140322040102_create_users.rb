@@ -10,6 +10,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :eye_color
       t.string :hair_color
       t.string :gender
+      t.string :ethnicity
       t.string :img
       t.timestamps
     end

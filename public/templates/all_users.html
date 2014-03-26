@@ -25,6 +25,7 @@
             <td>{{user.weight}}</td>
         </tr>
       </table>
+      
 
     <div class="row" id="row_actors" data-equalizer>
       <div ng-repeat="user in users | filter:{name: search.name, gender: search.gender, hair_color: search.hair_color, height: search.height, weight: search.weight}">

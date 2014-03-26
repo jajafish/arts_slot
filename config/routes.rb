@@ -5,4 +5,5 @@ CastingSlotMachine::Application.routes.draw do
     resources :characters
   end
   resources :users, only: [:show, :index]
+  resources :characters
 end

@@ -1,74 +1,84 @@
-<div class="row">
-    <div class="small-12 large-12 columns">
 
-  <br>
-  <br>
-
+<form class="project_form" ng-submit="updateProject()"  ng-init="project={}">
+  <div class="row" ng-controller="projectsCtrl">
+    <div class="large-12 columns">
+      <input id="project_field_title" type="text" ng-model="project.name" placeholder="film title">
+    </div>
+  </div>
   <div class="row">
-      <div ng-controller="projectsCtrl">
-        <form class="project_form" ng-submit="updateProject()"  ng-init="project={}">
-          <div class="row">
-            <div class="large-12 columns">
-              <input id="project_field_title" type="text" ng-model="project.name" placeholder="film title">
+    <div class="large-3 columns large-left">
+      <input id="project_field_data" type="text" ng-model="project.location" placeholder="location">
+      <input id="project_field_data" type="text" ng-model="project.description" placeholder="description"></form>
+    </div>
+    <div class="large-9 columns" ng-controller="charactersCtrl">
+      <a href="" id="new_char_button" class="button expand">Add a Character
+      <div id="hide_this" class="row">
+        <div class="large-centered large-10 columns">
+          <form ng-submit="saveCharacter()" ng-init="character={}">
 
-            </div>
-          </div>
+            <br>
+            <br>
 
+            <input type="text" ng-model="character.name" placeholder="name">
 
-        <div class="row">
-          <div class="large-3 columns large-left">
-            <input id="project_field_data" type="text" ng-model="project.location" placeholder="location">
-            <input id="project_field_data" type="text" ng-model="project.description" placeholder="description">
+            <input type="text" ng-model="character.age" placeholder="age">
+
+            <input ng-model="character.gender" type="radio" name="sex" value="male">Male<br>
+
+            <input ng-model="character.gender" type="radio" name="sex" value="female">Female
+
+            <input type="text" ng-model="character.height" placeholder="height">
+
+            <input type="text" ng-model="character.weight" placeholder="weight">
+
+            <input type="text" ng-model="character.eye_color" placeholder="eye color">
+
+            <input type="text" ng-model="character.hair_color" placeholder="hair color">
+
+            <button class="btn btn-primary">add the character</button>
+
           </form>
 
+        </div>
+      </div></a>
 
 
+      <div ng-repeat="character in characters">
 
-          </div>
-          <div class="large-9 columns">
-            <div ng-controller="charactersCtrl">
-              <div ng-repeat="character in characters">
-                <div class="panel" id="character_panel">
-                    <h3>{{character.name}}</h3>
-                  <div class="row">
-                    <div class="large-4 columns">
-                      <p>{{character.age}} years old </p>
-                    </div>
-                    <div class="large-4 columns">
-                      <p>{{character.gender}}</p>
-                    </div>
-                    <div class="large-4 columns">
-                      <p>{{character.height}} feet tall</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="large-4 columns">
-                      <p>{{character.weight}} pounds</p>
-                    </div>
-                    <div class="large-4 columns">
-                      <p>{{character.eye_color}} eyes</p>
-                    </div>
-                    <div class="large-4 columns">
-                      <p>{{character.hair_color}} hair</p>
-                    </div>
-                  </div>
+        <div class="panel" id="character_panel">
+            <h3>{{character.name}}</h3>
 
-
-
-
-
-
-
-
-                </div>
+            <div class="row">
+              <div class="large-4 columns">
+                <p>{{character.age}} years old </p>
+              </div>
+              <div class="large-4 columns">
+                <p>{{character.gender}}</p>
+              </div>
+              <div class="large-4 columns">
+                <p>{{character.height}} feet tall</p>
               </div>
             </div>
-          </div>
+
+            <div class="row">
+              <div class="large-4 columns">
+                <p>{{character.weight}} pounds</p>
+              </div>
+              <div class="large-4 columns">
+                <p>{{character.eye_color}} eyes</p>
+              </div>
+              <div class="large-4 columns">
+                <p>{{character.hair_color}} hair</p>
+              </div>
+            </div>
+
         </div>
 
       </div>
 
-    <br>
+
+
+    </div>
 
 
 
@@ -83,5 +93,40 @@
 
 
 
-  </div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  $(document).ready(function () {
+    $('#hide_this').hide();
+    $("#new_char_button").click(function(){
+      $('#hide_this').slideDown("slow");
+      $('#new_char_button').height('450px', "slow");
+    });
+  });
+
+</script>

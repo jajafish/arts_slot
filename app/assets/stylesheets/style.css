@@ -6,15 +6,6 @@
   height: 170px;
 }
 
-/*
-.movie_footer {
-  position: fixed;
-  bottom: 0px;
-  background-color: blue;
-  width: 100%;
-
-}*/
-
 
 #project_field_title {
   text-align: left;
@@ -34,9 +25,11 @@
   box-shadow: none;
 }
 
-#add_char_button {
-
-  width: 100%;
+#new_char_button {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  letter-spacing:10px
 }
 
 #char_name {
@@ -45,8 +38,9 @@
 
 .add_character {
 
-  background-color: rgba(22, 160, 133,.5);
+/*  background-color: rgba(22, 160, 133,.5);*/
   padding: 10px;
+  border: .5px solid black;
 }
 
 #character_panel {
