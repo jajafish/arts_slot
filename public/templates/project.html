@@ -1,14 +1,13 @@
-
-<form class="project_form" ng-submit="updateProject()"  ng-init="project={}">
-  <div class="row" ng-controller="projectsCtrl">
+<div ng-controller="projectsCtrl">
+  <div class="row">
     <div class="large-12 columns">
-      <input id="project_field_title" type="text" ng-model="project.name" placeholder="film title">
+      <h1>{{project.name}}</h1>
     </div>
-  </div>
+
   <div class="row">
     <div class="large-3 columns large-left">
-      <input id="project_field_data" type="text" ng-model="project.location" placeholder="location">
-      <input id="project_field_data" type="text" ng-model="project.description" placeholder="description"></form>
+      <h3>{{project.location}}</h3>
+      <h3>{{project.description}}</h3>
     </div>
     <div class="large-9 columns" ng-controller="charactersCtrl">
       <a href="" id="new_char_button" class="button expand">Add a Character

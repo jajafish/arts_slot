@@ -6,6 +6,8 @@ angular.module("artSlotAppCtrls")
 
         $scope.projects = []
 
+        $scope.project = projectRes.get(id: $routeParams.id)
+
         projectRes.query((data) ->
             console.log(data);
             $scope.projects = data;
